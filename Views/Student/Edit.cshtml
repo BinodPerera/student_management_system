@@ -1,7 +1,7 @@
 ﻿@model student_management_system.Models.Student
 
 <h2>Add Student</h2>
-<form asp-action="Edit" asp-controller="Student" asp-route-id="@Model.StudentID" method="post">
+<form asp-action="Edit">
     <input type="hidden" asp-for="StudentID" />
     <div class="form-group">
         <label asp-for="Name"></label>
@@ -28,6 +28,4 @@
         <input asp-for="EnrollmentYear" class="form-control" />
     </div>
     <button type="submit" class="btn btn-success">Save</button>
-    <p>Form will post to: @Url.Action("Edit", "Student", new { id = Model.StudentID })</p>
-
 </form>

@@ -72,6 +72,7 @@ namespace student_management_system.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Student student)
         {
+            Console.WriteLine("user id: {id}", id);
             if (id != student.StudentID) return NotFound();
 
             if (ModelState.IsValid)
